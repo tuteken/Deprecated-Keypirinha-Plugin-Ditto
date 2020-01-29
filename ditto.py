@@ -79,7 +79,7 @@ class Ditto(kp.Plugin):
         self.item_label = settings.get_stripped("item_label", "main", self.DEFAULT_ITEM_LABEL)
         self.always_suggest = settings.get_bool("always_suggest", "main", self.DEFAULT_ALWAYS_SUGGEST)
         self.date_format = settings.get_stripped("date_format", "main", self.DEFAULT_DATE_FORMAT)
-        self.item_limit = settings.get_bool("item_limit", "main", self.DEFAULT_ITEM_LIMIT)
+        self.item_limit = settings.get_int("item_limit", "main", self.DEFAULT_ITEM_LIMIT)
         
     def _create_keyword_item(self, label, short_desc):
         return self.create_item(
